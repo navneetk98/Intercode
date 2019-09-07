@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 400px;
+    src: url("../fonts/SourceCodePro-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400px;
+    src: url("../fonts/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400px;
+}
+
+{
+    -fx-background-color: black
+;
+}
+.scroll-bar > .thumb {
+    -fx-background-color: gray;
+    -fx-font-size: 17px;
+}
+
+.scroll-bar > .increment-arrow {
+    -fx-background-color: black;
+    -fx-background-size: 1px;
+}
+
+.scroll-bar > :vertical {
+    -fx-background-size: 10px;
+}
+
+.scroll-bar > .decrement-arrow {
+    -fx-background-color: black;
+}
+
+.scroll-bar > .increment-button {
+    -fx-background-color: lightgray;
+    -fx-font-size: 17px;
+}
+
+.scroll-bar > .decrement-button {
+    -fx-background-color: lightgray;
+    -fx-font-size: 17px;
+}
+
+.scroll-bar > .corner {
+    -fx-background-color: gray;
+}
+
+.scroll-bar > .track {
+    -fx-background-color: lightgray;
+}

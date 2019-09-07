@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.embed.swing.SwingNode?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="Vboxmain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/styleall.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Intercodecontroller">
+    <MenuBar prefHeight="31.0" prefWidth="600.0" stylesheets="@../css/styleMenu.css">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#news" text="New              Ctrl+N" />
+            <MenuItem mnemonicParsing="false" onAction="#load" text="Open...          Ctrl+O" />
+            <MenuItem mnemonicParsing="false" onAction="#save" text="Save              Ctrl+S" />
+            <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Save As..." />
+            <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Style">
+
+            <Menu mnemonicParsing="false" text="Font Family">
+                <MenuItem mnemonicParsing="false" onAction="#ubuntu" text="Ubuntu" />
+                <MenuItem mnemonicParsing="false" onAction="#arial" text="Arial" />
+                <MenuItem mnemonicParsing="false" onAction="#scp" text="Source Code Pro" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Font Size">
+                <RadioMenuItem onAction="#n15" text="15" />
+                <RadioMenuItem onAction="#n14" text="14" />
+                <RadioMenuItem onAction="#n13" text="13" />
+                <RadioMenuItem onAction="#n12" text="12" />
+                <RadioMenuItem onAction="#n11" text="11" />
+                <RadioMenuItem onAction="#n10p5" text="10.5" />
+                <RadioMenuItem onAction="#n10" text="10" />
+                <RadioMenuItem onAction="#n9" text="9" />
+                <RadioMenuItem onAction="#n8" text="8" />
+                <RadioMenuItem onAction="#n7" text="7" />
+                <RadioMenuItem onAction="#n6" text="6" />
+                <Menu text="More...">
+                    <MenuItem onAction="#n16" text="16" />
+                    <MenuItem onAction="#n18" text="18" />
+                    <MenuItem onAction="#n20" text="20" />
+                    <MenuItem onAction="#n22" text="22" />
+                    <MenuItem onAction="#n24" text="24(Default)" />
+                    <MenuItem onAction="#n26" text="26" />
+                    <MenuItem onAction="#n28" text="28" />
+                    <MenuItem onAction="#n32" text="32" />
+                    <MenuItem onAction="#n36" text="36" />
+                    <MenuItem onAction="#n40" text="40" />
+                    <MenuItem onAction="#n44" text="44" />
+                    <MenuItem onAction="#n48" text="48" />
+                    <MenuItem onAction="#n54" text="54" />
+                    <MenuItem onAction="#n60" text="60" />
+                    <MenuItem onAction="#n66" text="66" />
+                    <MenuItem onAction="#n72" text="72" />
+                </Menu>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Themes">
+                <RadioMenuItem fx:id="lightbt" mnemonicParsing="false" onAction="#lightTheme" text="Light Theme" />
+                <RadioMenuItem fx:id="darkbt" mnemonicParsing="false" onAction="#darkTheme" text="Dark Theme" />
+            </Menu>
+        </Menu>
+    </MenuBar>
+   <SwingNode id="swingNode" fx:id="swingNode">
+      <effect>
+         <Lighting>
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+         </Lighting>
+      </effect></SwingNode>
+   <TextArea fx:id="tftype" prefHeight="200.0" prefWidth="200.0" />
+   <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="85.0" prefWidth="258.0" ripplerFill="RED" text="Compile" textFill="RED" />
+</VBox>
