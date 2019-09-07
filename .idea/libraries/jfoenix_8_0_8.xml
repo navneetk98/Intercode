@@ -4,6 +4,9 @@
       <root url="jar://$PROJECT_DIR$/jfoenix-8.0.8.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/JFoenix-master/demo/src/main/java" />
+      <root url="file://$PROJECT_DIR$/JFoenix-master/jfoenix/src/main/java" />
+    </SOURCES>
   </library>
 </component>

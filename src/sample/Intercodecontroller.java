@@ -73,9 +73,21 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
     public void initialize(URL url, ResourceBundle rb) { // Be activates when the program opens.
 //        update();
         jpane = new JTextPane();
-       doc  = jpane.getStyledDocument();
-      // doc.addDocumentListener();
-       tftype.setText("Hello");
+
+      SyntaxHighlight.doc = jpane.getStyledDocument();
+
+
+       try{
+           SyntaxHighlight.readkeywords();
+       }catch(IOException ex)
+       {
+           System.out.println(ex.getMessage());
+       }
+
+
+
+
+       tftype.setText("Hello122satvik");
     //    jpane.setBounds(0,0,10,100);
         swingNode.setContent(jpane);
         jpane.setText("Hello sqwing\n\n\n\n\n\n\n\n");
@@ -138,7 +150,10 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
         }
     }
 
-
+public void liste()
+{
+    //System.out.println("Chchcahibfabafjadf");
+}
     public void load() throws IOException { // Load a archive
         FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("Text document (*.txt)", "*.txt");
         FileChooser.ExtensionFilter filter2 = new FileChooser.ExtensionFilter("All Files (.*.)", "*");
