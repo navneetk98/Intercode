@@ -62,6 +62,7 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
 
 
 
+
     @FXML
     public TextArea tftype; // The text typed for the USER
     public RadioMenuItem lightbt; // Button to change to light theme (themer)
@@ -69,6 +70,7 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
     public Parent Vboxmain; // The head of all
     public SwingNode swingNode;
     public Document doc;
+    public ComboBox combo;
     @Override
     public void initialize(URL url, ResourceBundle rb) { // Be activates when the program opens.
 //        update();
@@ -88,17 +90,18 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
 
 
        tftype.setText("Hello122satvik");
-    //    jpane.setBounds(0,0,10,100);
+
         swingNode.setContent(jpane);
-        jpane.setText("Hello sqwing\n\n\n\n\n\n\n\n");
-        jpane.setSize(500,500);
+        jpane.setBounds(10,10,100,100);
+       jpane.setText("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+     //   jpane.setSize(500,500);
         System.out.println(jpane.getText());
        // jpane.setBounds(5,5,15,15);
 //        tftype.setWrapText(true); // Set the tftype can be used like a text editor
         lightbt.setToggleGroup(themer); // Sets the ToogleGroup of the lightbt (Every Radio Button needs a ToogleGroup)
         darkbt.setToggleGroup(themer); // Sets the ToogleGroup of the darkbt (Every Radio Button needs a ToogleGroup)
         darkbt.setSelected(true); // Sets the darkbt button bes selected or as default option
-       // StaticClass.tf=tftype;
+        StaticClass.combo=combo;
 //        tftype.setText("HEllo World noobies");
     }
 
@@ -149,10 +152,17 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
             f.close();
         }
     }
-
-public void liste()
+public void onkey()
 {
-    //System.out.println("Chchcahibfabafjadf");
+
+    if (combo.getValue() != null &&
+            !combo.getValue().toString().isEmpty()){
+
+        System.out.println(combo.getValue().toString());
+}
+//public void liste()
+//{
+//    //System.out.println("Chchcahibfabafjadf");
 }
     public void load() throws IOException { // Load a archive
         FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("Text document (*.txt)", "*.txt");

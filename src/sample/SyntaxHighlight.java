@@ -1,11 +1,17 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.StyledDocument;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
@@ -214,12 +220,12 @@ public class SyntaxHighlight implements DocumentListener {
 
             autoComplete = Trie.getWords(search);
 
-            for(int i=0; i<autoComplete.size(); i++ )
-            {
-                System.out.println(autoComplete.get(i));
-            }
 
+//Pass it over in this manner
 
+            ObservableList<String> observableList = FXCollections.observableList(autoComplete);
+          //  StaticClass.combo = new ComboBox<String>();
+           StaticClass.combo.setItems(observableList);
 
             SimpleAttributeSet redColor = new SimpleAttributeSet();
             SimpleAttributeSet blackColor = new SimpleAttributeSet();

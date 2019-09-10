@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.embed.swing.SwingNode?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -64,7 +64,8 @@
             </Menu>
         </Menu>
     </MenuBar>
-   <SwingNode id="swingNode" fx:id="swingNode" onKeyPressed="#liste">
+   <ComboBox fx:id="combo" onAction="#onkey" prefWidth="150.0" promptText="Suggessions" />
+   <SwingNode id="swingNode" fx:id="swingNode" styleClass="text-area">
       <effect>
          <Lighting>
             <bumpInput>

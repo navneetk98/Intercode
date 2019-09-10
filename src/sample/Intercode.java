@@ -25,7 +25,7 @@ public class Intercode extends Application {
    //     StackPane pane = new StackPane();
   //      pane.getChildren().add(swingNode);
 
-        primaryStage.setTitle("Untitled - SSG Note Block");
+        primaryStage.setTitle("Intercode");
         primaryStage.setScene(new Scene(root, 1280, 1024));
         primaryStage.setMaximized(true);
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/sbi.png")));

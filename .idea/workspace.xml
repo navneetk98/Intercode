@@ -10,9 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Exit ask system.">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/Intercode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/Intercode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/SyntaxHighlight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/SyntaxHighlight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/intercode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/intercode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Intercode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Intercode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Intercodecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Intercodecontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/StaticClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/StaticClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/SyntaxHighlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SyntaxHighlight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/intercode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/intercode.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -67,15 +72,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Intercodecontroller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2142">
-              <caret line="153" column="1" selection-start-line="153" selection-start-column="1" selection-end-line="153" selection-end-column="1" />
+            <state relative-caret-position="289">
+              <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7743#7744#0" expanded="true" />
-                <element signature="e#7778#7779#0" expanded="true" />
+                <element signature="e#8037#8038#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/StaticClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/SyntaxHighlight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2842">
-              <caret line="214" column="49" lean-forward="true" selection-start-line="214" selection-start-column="49" selection-end-line="214" selection-end-column="49" />
+            <state relative-caret-position="291">
+              <caret line="226" column="57" selection-start-line="226" selection-start-column="57" selection-end-line="226" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,14 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-              <folding>
-                <element signature="e#2309#2336#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="87">
+              <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -108,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Intercode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="187">
+              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,15 +132,12 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/intercode.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
-              <folding>
-                <element signature="n#Menu#0;n#Menu#1;n#Menu#1;n#MenuBar#0;n#VBox#0;n#!!top" />
-              </folding>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="74" column="19" lean-forward="true" selection-end-line="83" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -178,6 +188,13 @@
       <find>font</find>
       <find>tftype</find>
       <find>save</find>
+      <find>syntax</find>
+      <find>println</find>
+      <find>COMBO</find>
+      <find>print</find>
+      <find>getw</find>
+      <find>onk</find>
+      <find>trie</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -205,17 +222,17 @@
         <option value="$PROJECT_DIR$/src/sample/exit.java" />
         <option value="$PROJECT_DIR$/src/css/styletf.css" />
         <option value="$PROJECT_DIR$/src/css/stylef.css" />
-        <option value="$PROJECT_DIR$/src/sample/StaticClass.java" />
         <option value="$PROJECT_DIR$/src/sample/network.java" />
         <option value="$PROJECT_DIR$/src/sample/sscnoteblock.java" />
         <option value="$PROJECT_DIR$/src/sample/sscnoteblock.fxml" />
         <option value="$PROJECT_DIR$/src/sample/sscnoteblockController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Intercode.java" />
         <option value="$PROJECT_DIR$/src/sample/Keywords/c" />
+        <option value="$PROJECT_DIR$/src/sample/Intercode.java" />
+        <option value="$PROJECT_DIR$/src/sample/Node.java" />
+        <option value="$PROJECT_DIR$/src/sample/StaticClass.java" />
+        <option value="$PROJECT_DIR$/src/sample/SyntaxHighlight.java" />
         <option value="$PROJECT_DIR$/src/sample/intercode.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Intercodecontroller.java" />
-        <option value="$PROJECT_DIR$/src/sample/Node.java" />
-        <option value="$PROJECT_DIR$/src/sample/SyntaxHighlight.java" />
       </list>
     </option>
   </component>
@@ -234,8 +251,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,6 +285,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Course" />
     </panes>
   </component>
@@ -288,7 +305,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/schil/IdeaProjects/sscnoteblock/src/sample/sscnoteblockController.java&#10;styleMenu&#9;FILE&#9;file://C:/Users/schil/IdeaProjects/sscnoteblock/src/css/styleMenu.css&#10;Controller&#9;FILE&#9;file://C:/Users/schil/IdeaProjects/sscnoteblock/src/sample/Controller.java&#10;sscnote&#9;FILE&#9;file://C:/Users/schil/IdeaProjects/sscnoteblock/src/sample/sscnoteblock.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567854445483" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568080282202" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/JFoenix-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -453,7 +470,8 @@
       <workItem from="1567836895761" duration="2617000" />
       <workItem from="1567841801820" duration="1020000" />
       <workItem from="1567842906268" duration="5061000" />
-      <workItem from="1567848913234" duration="5763000" />
+      <workItem from="1567848913234" duration="8253000" />
+      <workItem from="1568065413443" duration="13335000" />
     </task>
     <task id="LOCAL-00001" summary="I Changed the Load System and i removed a buf of the Load System.">
       <created>1533068939508</created>
@@ -522,7 +540,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143203000" />
+    <option name="totallyTimeSpent" value="159028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -648,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/StaticClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Keywords/c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
@@ -662,43 +673,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Intercodecontroller.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="153" column="1" selection-start-line="153" selection-start-column="1" selection-end-line="153" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7743#7744#0" expanded="true" />
-            <element signature="e#7778#7779#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Intercode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/intercode.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
-          <folding>
-            <element signature="n#Menu#0;n#Menu#1;n#Menu#1;n#MenuBar#0;n#VBox#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/stylef.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="87">
+          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -709,22 +687,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SyntaxHighlight.java">
+    <entry file="file://$PROJECT_DIR$/src/css/stylef.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2842">
-          <caret line="214" column="49" lean-forward="true" selection-start-line="214" selection-start-column="49" selection-end-line="214" selection-end-column="49" />
+        <state relative-caret-position="374">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/intercode.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="74" column="19" lean-forward="true" selection-end-line="83" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Intercode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/StaticClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        <state relative-caret-position="170">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding>
-            <element signature="e#2309#2336#1" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SyntaxHighlight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="226" column="57" selection-start-line="226" selection-start-column="57" selection-end-line="226" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Intercodecontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8037#8038#0" expanded="true" />
           </folding>
         </state>
       </provider>
