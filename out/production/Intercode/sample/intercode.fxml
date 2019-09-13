@@ -11,8 +11,8 @@
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="Vboxmain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/styleall.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Intercodecontroller">
-    <MenuBar prefHeight="31.0" prefWidth="600.0" stylesheets="@../css/styleMenu.css">
+<VBox fx:id="Vboxmain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="672.0" stylesheets="@../css/styleall.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Intercodecontroller">
+    <MenuBar prefHeight="31.0" prefWidth="358.0" stylesheets="@../css/styleMenu.css">
         <Menu mnemonicParsing="false" text="File">
             <MenuItem mnemonicParsing="false" onAction="#news" text="New              Ctrl+N" />
             <MenuItem mnemonicParsing="false" onAction="#load" text="Open...          Ctrl+O" />
@@ -63,8 +63,12 @@
                 <RadioMenuItem fx:id="darkbt" mnemonicParsing="false" onAction="#darkTheme" text="Dark Theme" />
             </Menu>
         </Menu>
+      <Menu mnemonicParsing="false" text="Compile and display output">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+        </items>
+      </Menu>
     </MenuBar>
-   <ComboBox fx:id="combo" onAction="#onkey" prefWidth="150.0" promptText="Suggessions" />
    <SwingNode id="swingNode" fx:id="swingNode" styleClass="text-area">
       <effect>
          <Lighting>
@@ -72,7 +76,9 @@
                <Shadow />
             </bumpInput>
          </Lighting>
-      </effect></SwingNode>
-   <TextArea fx:id="tftype" prefHeight="200.0" prefWidth="200.0" />
+      </effect>
+   </SwingNode>
+   <ComboBox fx:id="combo" onAction="#onkey" prefWidth="150.0" promptText="Suggessions" />
+   <TextArea fx:id="tftype" disable="true" editable="false" prefHeight="181.0" prefWidth="509.0" />
 
 </VBox>

@@ -18,7 +18,7 @@ public class Intercode extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException, java.lang.OutOfMemoryError, java.lang.NullPointerException {
-        Parent root = FXMLLoader.load(getClass().getResource("intercode.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("try3.fxml"));
     //    final SwingNode swingNode = new SwingNode();
       //  createSwingContent(swingNode);
 

@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -71,6 +72,7 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
     public SwingNode swingNode;
     public Document doc;
     public ComboBox combo;
+    public Label bottom_left;
     @Override
     public void initialize(URL url, ResourceBundle rb) { // Be activates when the program opens.
 //        update();
@@ -85,13 +87,14 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
        {
            System.out.println(ex.getMessage());
        }
-
-
+JScrollPane scroller = new JScrollPane(jpane);
+swingNode.resize(10,10);
 
 
        tftype.setText("Hello122satvik");
 
-        swingNode.setContent(jpane);
+        swingNode.setContent(scroller);
+       // swingNode.setContent(scroller);
         jpane.setBounds(10,10,100,100);
        jpane.setText("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
      //   jpane.setSize(500,500);
@@ -103,6 +106,7 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
         darkbt.setSelected(true); // Sets the darkbt button bes selected or as default option
         StaticClass.combo=combo;
 //        tftype.setText("HEllo World noobies");
+
     }
 
 
@@ -140,7 +144,7 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
             }
             try {
                 if (file != null) {
-                    ((Stage) Vboxmain.getScene().getWindow()).setTitle(file.getName() + " - SSG Note Block");
+                    ((Stage) Vboxmain.getScene().getWindow()).setTitle(file.getName() + "Intercode");
                 }
             } catch (java.lang.NullPointerException e) {
                 e.printStackTrace();
@@ -486,6 +490,60 @@ public String ss="";
     public void changedUpdate(DocumentEvent e) {
 
     }
+    public void compile()
+    {
+        String Os=System.getProperty("os.name");
+        tftype.setText(Os);
+        if(Os.compareTo("Linux")==0){
+            bottom_left.setText("Detected os : Linux");
+//                Runtime runtime=Runtime.getRuntime();
+//                try{
+//                    String command="";
+//                   // if(cfilter.accept(file))
+//                        command="gcc"+" "+file.getAbsolutePath();
+//                   // if(cppfilter.accept(file))
+//                     //   command="g++"+" " +file.getAbsolutePath();
+//                   // if(javafilter.accept(file))
+//                       // command="javac"+" "+file.getAbsolutePath();
+//                    Process proc=runtime.exec(command,null,file.getParentFile());
+//                    proc.waitFor();
+//                    Scanner scan=new Scanner(proc.getErrorStream());
+//                    StyledDocument doc = OutputArea.getStyledDocument();
+//                    if(scan.hasNext()){
+//                        OutputArea.setText("");
+//                        doc.insertString(doc.getLength(),"Compilation Error \n",failure);
+//                        while(scan.hasNext())
+//                            doc.insertString(doc.getLength()," "+scan.nextLine()+"\n",null);
+//                        return 0;
+//                    }
+//                    else{
+//                        OutputArea.setText("");
+//                        doc.insertString(doc.getLength(),"Code compiled successfully!!!",success);
+//                        return 1;
+//                    }
+//                }
+//                catch(IOException e){
+//                    JOptionPane.showMessageDialog(dialog,"Input Output Exception Occurred");
+//                    return 0;
+//                }
+//                catch(InterruptedException e){
+//                    JOptionPane.showMessageDialog(dialog,"Process Interrupted");
+//                    return 0;
+//                } catch (BadLocationException ex) {
+//                    System.out.println("Internal Error In Output Area !!!!!!!!");
+//                    return 0;
+//                }
+            }
+        if (Os.compareTo("Windows 10")==0) {
+            bottom_left.setText("Detected os : Windows 10");
+        }
+            else{
+            bottom_left.setText("Unsupported Operating System");
+
+            }
+        }
+    }
+
 
 //    private int compile(){
 ////        int index=TabbedPane.getSelectedIndex();
@@ -545,7 +603,7 @@ public String ss="";
 //        }
 //    }
 
-}
+
 
 
 
