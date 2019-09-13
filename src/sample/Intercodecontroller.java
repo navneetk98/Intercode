@@ -70,16 +70,19 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
     public RadioMenuItem darkbt; // Button to change to dark theme (themer)
     public Parent Vboxmain; // The head of all
     public SwingNode swingNode;
+
     public Document doc;
+
     public ComboBox combo;
     public Label bottom_left;
+    public Label top_left_label;
     @Override
     public void initialize(URL url, ResourceBundle rb) { // Be activates when the program opens.
 //        update();
         jpane = new JTextPane();
-
+        top_left_label.setText("Welcome : "+StaticClass.name+"   "+StaticClass.regno);
       SyntaxHighlight.doc = jpane.getStyledDocument();
-
+        jpane.setBounds(10,10,1000,1000);
 
        try{
            SyntaxHighlight.readkeywords();
@@ -87,15 +90,14 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
        {
            System.out.println(ex.getMessage());
        }
-JScrollPane scroller = new JScrollPane(jpane);
-swingNode.resize(10,10);
+        JScrollPane scroller = new JScrollPane(jpane);
 
-
-       tftype.setText("Hello122satvik");
+      //  swingNode.resize(1000,1000);
+      // tftype.setText("Hello122satvik");
 
         swingNode.setContent(scroller);
        // swingNode.setContent(scroller);
-        jpane.setBounds(10,10,100,100);
+
        jpane.setText("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
      //   jpane.setSize(500,500);
         System.out.println(jpane.getText());
@@ -110,8 +112,39 @@ swingNode.resize(10,10);
     }
 
 
+    public void save()
+    {
+System.out.println("Chacha method called");
+
+        String text="";
+
+        try{
+            int len =SyntaxHighlight.doc .getLength();
+             text = SyntaxHighlight.doc.getText(0,len);
+
+
+            System.out.println(text);
+        }catch (Exception ex){
+            System.out.println("Error");
+            System.out.println(ex.getMessage());
+        }
+
+    try{
+        File file = new File("test1.txt");
+        FileWriter fileWriter = new FileWriter(file);
+        fileWriter.write(text);
+        fileWriter.flush();
+    }
+    catch(Exception ex){
+        System.out.println(ex.getMessage());
+    }
+
+
+    }
+
+
     // Archive (Save) System
-    public void save() throws IOException, java.lang.NullPointerException { // Save what was typed for USER
+   /* public void save() throws IOException, java.lang.NullPointerException { // Save what was typed for USER
         if (!savedFileB || saveAs) {
             FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("Text document (*.txt)", "*.txt"); // Creates a filter with the description "Text Document (*.txt)" (The description is what shows when you selects the extension) and with the extension "*txt" or "*txy" or "*.txt"
             FileChooser.ExtensionFilter filter2 = new FileChooser.ExtensionFilter("All Files (.*.)", "*"); // Creates a filter with the description ""All Files (.*.)" (The description is what shows when you selects the extension) and with the extension "*.*"
@@ -155,7 +188,7 @@ swingNode.resize(10,10);
             f.write(jpane.getText());
             f.close();
         }
-    }
+    }*/
 public void onkey()
 {
 
@@ -199,11 +232,12 @@ public void onkey()
 
     public void saveAs() {
         saveAs = true;
-        try {
-            save();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            save();
+//        }
+//        catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public void news() {
@@ -260,11 +294,11 @@ public void onkey()
             if (sKey.get() && controlKey.get()) {
                 sKey.set(false);
                 controlKey.set(false);
-                try {
-                    save();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    save();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
             }
         });
     }
@@ -496,6 +530,15 @@ public String ss="";
         tftype.setText(Os);
         if(Os.compareTo("Linux")==0){
             bottom_left.setText("Detected os : Linux");
+
+
+
+
+
+
+
+
+
 //                Runtime runtime=Runtime.getRuntime();
 //                try{
 //                    String command="";
@@ -536,6 +579,8 @@ public String ss="";
             }
         if (Os.compareTo("Windows 10")==0) {
             bottom_left.setText("Detected os : Windows 10");
+
+
         }
             else{
             bottom_left.setText("Unsupported Operating System");

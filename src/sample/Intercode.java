@@ -18,14 +18,14 @@ public class Intercode extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException, java.lang.OutOfMemoryError, java.lang.NullPointerException {
-        Parent root = FXMLLoader.load(getClass().getResource("try3.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Design.fxml"));
     //    final SwingNode swingNode = new SwingNode();
       //  createSwingContent(swingNode);
 
    //     StackPane pane = new StackPane();
   //      pane.getChildren().add(swingNode);
 
-        primaryStage.setTitle("Intercode");
+        primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(root, 1280, 1024));
         primaryStage.setMaximized(true);
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/sbi.png")));
