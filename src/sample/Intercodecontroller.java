@@ -2,6 +2,7 @@ package sample;
 
 // JavaFX All
 
+import com.sun.org.apache.bcel.internal.classfile.Code;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
@@ -134,6 +135,7 @@ System.out.println("Chacha method called");
         FileWriter fileWriter = new FileWriter(file);
         fileWriter.write(text);
         fileWriter.flush();
+        StaticClass.file=file;
     }
     catch(Exception ex){
         System.out.println(ex.getMessage());
@@ -497,7 +499,7 @@ public String ss="";
 
     public void exiter() {
         Alert exitAlert = new Alert(Alert.AlertType.NONE);
-        exitAlert.setTitle("SSC Note Block");
+        exitAlert.setTitle("Intercode");
         exitAlert.setHeaderText("Do you want to save the changes?");
         exitAlert.setContentText(null);
         ButtonType buttonCancel = new ButtonType("Cancel");
@@ -579,7 +581,7 @@ public String ss="";
             }
         if (Os.compareTo("Windows 10")==0) {
             bottom_left.setText("Detected os : Windows 10");
-
+            new Codecompilation();
 
         }
             else{
