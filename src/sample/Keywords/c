@@ -33,3 +33,7 @@ while
 main
 return
 while
+include
+stdio
+printf
+scanf

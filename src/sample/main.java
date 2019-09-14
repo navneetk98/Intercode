@@ -1,8 +1,5 @@
 package sample;
 
-// JavaFX All
-
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,8 +10,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 // JavaFX Scene
 
@@ -32,12 +27,6 @@ public TextField cpi;
             StaticClass.regno = regno.getText();
             Parent root = FXMLLoader.load(getClass().getResource("try3.fxml"));
             Stage primaryStage = (Stage) ((Node)(click.getSource())).getScene().getWindow();
-            //    final SwingNode swingNode = new SwingNode();
-            //  createSwingContent(swingNode);
-
-            //     StackPane pane = new StackPane();
-            //      pane.getChildren().add(swingNode);
-
             primaryStage.setTitle("Intercode");
             primaryStage.setScene(new Scene(root, 1920, 1080));
             primaryStage.setMaximized(true);

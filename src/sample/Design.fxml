@@ -31,14 +31,14 @@
          </children>
       </Pane>
       <Line endX="100.0" layoutX="373.0" layoutY="254.0" rotate="90.0" startX="-150.0" stroke="#465058" strokeWidth="2.0" />
+      <TextField fx:id="name" layoutX="404.0" layoutY="147.0" prefHeight="20.0" prefWidth="248.0" promptText="Name" style="-fx-background-color: #2A363F; -fx-border-color: #465058;" stylesheets="@login.css" />
       <TextField fx:id="regno" layoutX="404.0" layoutY="189.0" prefHeight="20.0" prefWidth="248.0" promptText="Reg.No" style="-fx-background-color: #2A363F; -fx-border-color: #465058;" stylesheets="@login.css" />
       <TextField fx:id="cpi" layoutX="404.0" layoutY="230.0" prefHeight="10.0" prefWidth="248.0" promptText="CPI" style="-fx-border-color: #465058; -fx-background-color: #2A363F;" stylesheets="@login.css" />
+      <PasswordField fx:id="pass" layoutX="404.0" layoutY="272.0" prefHeight="10.0" prefWidth="248.0" promptText="Password" style="-fx-border-color: #465058; -fx-background-color: #2A363F;" stylesheets="@login.css" />
       <JFXButton layoutX="404.0" layoutY="324.0" onAction="#login" prefHeight="41.0" prefWidth="248.0" style="-fx-background-color: #87d973;" stylesheets="@login.css" text="Enter" textFill="#24451e">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <TextField fx:id="name" layoutX="404.0" layoutY="147.0" prefHeight="20.0" prefWidth="248.0" promptText="Name" style="-fx-background-color: #2A363F; -fx-border-color: #465058;" stylesheets="@login.css" />
-      <PasswordField fx:id="pass" layoutX="404.0" layoutY="272.0" prefHeight="10.0" prefWidth="248.0" promptText="Password" style="-fx-border-color: #465058; -fx-background-color: #2A363F;" stylesheets="@login.css" />
    </children>
 </AnchorPane>

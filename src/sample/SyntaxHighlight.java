@@ -225,7 +225,8 @@ public class SyntaxHighlight implements DocumentListener {
 
             ObservableList<String> observableList = FXCollections.observableList(autoComplete);
           //  StaticClass.combo = new ComboBox<String>();
-           StaticClass.combo.setItems(observableList);
+            StaticClass.list_id.setItems(observableList);
+          // StaticClass.combo.setItems(observableList);
 
             SimpleAttributeSet redColor = new SimpleAttributeSet();
             SimpleAttributeSet blackColor = new SimpleAttributeSet();

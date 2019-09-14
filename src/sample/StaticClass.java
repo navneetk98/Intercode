@@ -1,9 +1,8 @@
 package sample;
 
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-
 import java.io.File;
 
 public class StaticClass {
@@ -15,4 +14,5 @@ public class StaticClass {
     public static String name;
     public static String regno;
     public static File file;
+    public static ListView list_id;
 }
