@@ -7,27 +7,28 @@ import javafx.application.Platform;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.embed.swing.SwingNode;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.*;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import javafx.embed.swing.SwingNode;
-import javax.swing.event.DocumentListener;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.io.*;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 
 public class Intercodecontroller implements Initializable, Runnable, DocumentListener {
@@ -89,63 +90,68 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
 
 
     public void save() {
-        try {
-            if (!savedFileB || saveAs) {
-                FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("Text document (*.txt)", "*.txt");
-                FileChooser.ExtensionFilter filter2 = new FileChooser.ExtensionFilter("All Files (.*.)", "*");
-                if (tftype == null) {
-                    System.out.println("null");
-                }
-                FileChooser choose = new FileChooser();
-                if (saveAs) {
-                    choose.setTitle("Save As - Intercode");
-                } else {
-                    choose.setTitle("Save - Intercode");
-                }
-                choose.getExtensionFilters().addAll(filter, filter2);
-                Stage vista = (Stage) Vboxmain.getScene().getWindow();
-                File file = choose.showSaveDialog(vista);
-                String extension = "";
+
+        if (!savedFileB || saveAs) {
+            FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("Text document (*.txt)", "*.txt");
+            FileChooser.ExtensionFilter filter3 = new FileChooser.ExtensionFilter("C code", "*.c");
+            FileChooser.ExtensionFilter filter2 = new FileChooser.ExtensionFilter("All Files (.*.)", "*");
+            if (tftype == null) {
+                System.out.println("null");
+            }
+            FileChooser choose = new FileChooser();
+            if (saveAs) {
+                choose.setTitle("Save As - Intercode");
+            } else {
+                choose.setTitle("Save - Intercode");
+            }
+            choose.getExtensionFilters().addAll(filter, filter2, filter3);
+            Stage vista = (Stage) Vboxmain.getScene().getWindow();
+            File file = choose.showSaveDialog(vista);
+            String extension = "";
+            try {
                 if (file != null) { // If file is null is because has a error
                     if (!file.toString().contains(".txt")) { // If the
 
                         if (file.getCanonicalPath().endsWith("txt")) {
                             extension = "*.txt";
-                        } else {
-                            extension = null;
+                        } else if (!file.toString().contains(".c")) { // If the
+
+                            if (file.getCanonicalPath().endsWith("c")) {
+                                extension = "*.c";
+                            } else {
+                                extension = null;
+                            }
                         }
                     }
-                    FileWriter f = new FileWriter(file + extension);
-                    String text="";
-                    int len =SyntaxHighlight.doc .getLength();
-                    text = SyntaxHighlight.doc.getText(0,len);
-                    f.write(text);
-                    f.close();
-                    savedFileB = true;
-                    savedFile = file;
-                    savedFileExt = extension;
-                    saveAs = false;
-                }
-                try {
-                    if (file != null) {
-                        ((Stage) Vboxmain.getScene().getWindow()).setTitle(file.getName() + " - Intercode");
-                    }
-                } catch (java.lang.NullPointerException e) {
-                    e.printStackTrace();
                 }
 
-            }
-            else {
-                System.out.println("save called");
-                FileWriter f = new FileWriter(savedFile + savedFileExt);
+                FileWriter f = new FileWriter(file + extension);
                 String text="";
                 int len =SyntaxHighlight.doc .getLength();
                 text = SyntaxHighlight.doc.getText(0,len);
                 f.write(text);
                 f.close();
+                savedFileB = true;
+                savedFile = file;
+                StaticClass.file = file;
+                savedFileExt = extension;
+                saveAs = false;
+
+
+                if (file != null) {
+                    ((Stage) Vboxmain.getScene().getWindow()).setTitle(file.getName() + " - Intercode");
+                } else {
+                    System.out.println("save called");
+                    FileWriter f1 = new FileWriter(savedFile + savedFileExt);
+                    String text1 = "";
+                    int len1 = SyntaxHighlight.doc.getLength();
+                    text1 = SyntaxHighlight.doc.getText(0, len1);
+                    f1.write(text1);
+                    f1.close();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
         }
     }
 
@@ -499,23 +505,54 @@ public String ss="";
     {
         String Os=System.getProperty("os.name");
         tftype.setText(Os);
-        if(Os.compareTo("Linux")==0){
-            bottom_left.setText("Detected os : Linux");
+        if (Os.compareTo("Linux") == 0) {
+            Runtime runtime = Runtime.getRuntime();
+            try {
+                String command = "";
+
+                command = "gcc" + " " + StaticClass.file.getAbsolutePath();
+
+//                command="g++"+" " +file.getAbsolutePath();
+//
+//                command="javac"+" "+file.getAbsolutePath();
+                Process proc = runtime.exec(command, null, StaticClass.file.getParentFile());
+                proc.waitFor();
+                Scanner scan = new Scanner(proc.getErrorStream());
+
+                if (scan.hasNext()) {
+                    tftype.setText("Compilation Failure");
 
 
+                    while (scan.hasNext())
+                        tftype.setText(tftype.getText() + scan.nextLine() + "\n");
 
+                } else {
+                    tftype.setText("Code compiled successfully!!!");
 
-
-
-
-
-
-
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-        if (Os.compareTo("Windows 10")==0) {
-            bottom_left.setText("Detected os : Windows 10");
-            new Codecompilation();
+        }
 
+        if (Os.compareTo("Windows 10")==0) {
+            try {
+                bottom_left.setText("Detected os : Windows 10");
+                new Codecompilation();
+//                System.out.println(StaticClass.file.getAbsolutePath());
+//                String[] compileCommand = new String[]{"g++", StaticClass.file.getAbsolutePath() + StaticClass.file.getName(), "-o", StaticClass.file.getAbsolutePath() + "exec"};
+//                ProcessBuilder builder = new ProcessBuilder(compileCommand);
+//                Process comp = builder.start();
+//
+//                int compileResult = comp.waitFor();
+//
+//                if(compileResult != 0)
+//                    System.out.println(comp.getErrorStream().toString());
+//                else
+//                    System.out.println("Passed");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
             else{
             bottom_left.setText("Unsupported Operating System");

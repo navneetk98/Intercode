@@ -1,8 +1,6 @@
 package sample;
 
 import java.io.File;
-import java.io.IOException;
-import java.util.*;
 public class Codecompilation {
     public Codecompilation()  {
         try {
@@ -11,8 +9,9 @@ public class Codecompilation {
             String cmd_c = "gcc " + filename + "\n./a.out";
             String cmd_java = "javac " + filename + "\n java " + filename;
             String cmd_cpp = "g++ " + filename + "\n./a.out";
+            String[] compileCommand = new String[]{"g++", StaticClass.file.getAbsolutePath() + StaticClass.file.getName(), "-o", StaticClass.file.getAbsolutePath() + "exec"};
             ProcessBuilder processBuilder;
-            processBuilder = new ProcessBuilder("gcc"+" "+StaticClass.file.getAbsolutePath()," ","-o"," ",StaticClass.file.getName());
+            processBuilder = new ProcessBuilder("cmd", "/C", "gcc " + "\"" + filepath2 + "\\" + name + "\"" + " -o \"" + name2 + "\"");
             File commands=new File("D:\\Java Projects\\Intercode\\src\\FILES\\commands.txt");
             // File where error logs should be written
             File error = new File("D:\\Java Projects\\Intercode\\src\\FILES\\error.txt");
