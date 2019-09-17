@@ -19,7 +19,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
+import java.io.File;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -61,31 +61,31 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
     public ListView list_id;
     public Label bottom_left;
     public Label top_left_label;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) { // Be activates when the program opens.
 //        update();
         jpane = new JTextPane();
-        top_left_label.setText("Welcome : "+StaticClass.name+"   "+StaticClass.regno);
-      SyntaxHighlight.doc = jpane.getStyledDocument();
-        jpane.setBounds(10,10,1000,1000);
+        top_left_label.setText("Welcome : " + StaticClass.name + "   " + StaticClass.regno);
+        SyntaxHighlight.doc = jpane.getStyledDocument();
+        jpane.setBounds(10, 10, 1000, 1000);
 
-       try{
-           SyntaxHighlight.readkeywords();
-       }catch(IOException ex)
-       {
-           System.out.println(ex.getMessage());
-       }
-       JScrollPane scroller = new JScrollPane(jpane);
-       swingNode.setContent(scroller);
+        try {
+            SyntaxHighlight.readkeywords();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        JScrollPane scroller = new JScrollPane(jpane);
+        swingNode.setContent(scroller);
 
 
-       jpane.setText("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        jpane.setText("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println(jpane.getText());
         lightbt.setToggleGroup(themer); // Sets the ToogleGroup of the lightbt (Every Radio Button needs a ToogleGroup)
         darkbt.setToggleGroup(themer); // Sets the ToogleGroup of the darkbt (Every Radio Button needs a ToogleGroup)
         darkbt.setSelected(true); // Sets the darkbt button bes selected or as default option
-        StaticClass.combo=combo;
-        StaticClass.list_id=list_id;
+        StaticClass.combo = combo;
+        StaticClass.list_id = list_id;
     }
 
 
@@ -126,9 +126,9 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
                 }
 
                 FileWriter f = new FileWriter(file + extension);
-                String text="";
-                int len =SyntaxHighlight.doc .getLength();
-                text = SyntaxHighlight.doc.getText(0,len);
+                String text = "";
+                int len = SyntaxHighlight.doc.getLength();
+                text = SyntaxHighlight.doc.getText(0, len);
                 f.write(text);
                 f.close();
                 savedFileB = true;
@@ -156,17 +156,16 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
     }
 
 
-public void onkey()
-{
+    public void onkey() {
 //    System.out.println("hiiiiiiiii");
 
-    if (list_id.getSelectionModel().getSelectedItems() != null &&
-            !list_id.getSelectionModel().getSelectedItems().isEmpty()){
+        if (list_id.getSelectionModel().getSelectedItems() != null &&
+                !list_id.getSelectionModel().getSelectedItems().isEmpty()) {
 
-        System.out.println(list_id.getSelectionModel().getSelectedItems().toString());
-}
+            System.out.println(list_id.getSelectionModel().getSelectedItems().toString());
+        }
 
-}
+    }
 
     public void load() throws IOException {
         try {
@@ -197,9 +196,7 @@ public void onkey()
             } catch (java.lang.NullPointerException e) {
                 e.printStackTrace();
             }
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
@@ -209,8 +206,7 @@ public void onkey()
         saveAs = true;
         try {
             save();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -219,13 +215,12 @@ public void onkey()
         jpane.setText(null);
     }
 
-    private void timerKeyPress(BooleanProperty x)
-    {
+    private void timerKeyPress(BooleanProperty x) {
         Timeline time = new Timeline();
         time.setCycleCount(Timeline.INDEFINITE);
         KeyFrame frame = new KeyFrame(Duration.seconds(0.2), event -> {
-           x.set(false);
-           time.stop();
+            x.set(false);
+            time.stop();
         });
         time.getKeyFrames().add(frame);
         time.playFromStart();
@@ -281,7 +276,7 @@ public void onkey()
 
     // Updates System
     private void update() { // Updates the settings and personalization of the program.
-        Font font = new Font(ff, Font.BOLD, (int)ftz);
+        Font font = new Font(ff, Font.BOLD, (int) ftz);
         jpane.setFont(font);
         String theme = "null";
 
@@ -297,14 +292,14 @@ public void onkey()
     }
 
     // Fonts
-    public void scp(){ // Source Code Pro
+    public void scp() { // Source Code Pro
         ff = "'Source Code Pro'";
         update();
     }
 
     public void arial() { // Arial
         ff = "Arial";
-       update();
+        update();
     }
 
     public void ubuntu() { // Ubuntu
@@ -461,10 +456,12 @@ public void onkey()
     public void lightTheme() { // Define LightTheme
         jpane.setBackground(Color.white);
     }
-public String ss="";
+
+    public String ss = "";
+
     @Override
     public void run() {
-        for(int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
             ss = jpane.getText();
             System.out.print(ss);
 
@@ -485,7 +482,7 @@ public String ss="";
         if (buttonDntSave == result.get()) {
             System.exit(0);
         }
-        }
+    }
 
     @Override
     public void insertUpdate(DocumentEvent e) {
@@ -501,63 +498,84 @@ public String ss="";
     public void changedUpdate(DocumentEvent e) {
 
     }
-    public void compile()
-    {
-        String Os=System.getProperty("os.name");
-        tftype.setText(Os);
-        if (Os.compareTo("Linux") == 0) {
-            Runtime runtime = Runtime.getRuntime();
-            try {
-                String command = "";
 
-                command = "gcc" + " " + StaticClass.file.getAbsolutePath();
+    public void compile() {
+        if (StaticClass.file == null) {
+            System.out.println("File not saved");
+            Alert ale = new Alert(Alert.AlertType.ERROR);
+            ale.setTitle("Intercode");
+            ale.setHeaderText("File cannot be compiled without saving please first save file");
+            ale.showAndWait();
+        }
+        else {
+            String Os = System.getProperty("os.name");
+            tftype.setText(Os);
+            if (Os.compareTo("Linux") == 0) {
+                Runtime runtime = Runtime.getRuntime();
+                try {
+                    String command = "";
+
+                    command = "gcc" + " " + StaticClass.file.getAbsolutePath();
+                    System.out.println(StaticClass.file.getAbsolutePath());
 
 //                command="g++"+" " +file.getAbsolutePath();
 //
 //                command="javac"+" "+file.getAbsolutePath();
-                Process proc = runtime.exec(command, null, StaticClass.file.getParentFile());
-                proc.waitFor();
-                Scanner scan = new Scanner(proc.getErrorStream());
+                    Process proc = runtime.exec(command);
 
-                if (scan.hasNext()) {
-                    tftype.setText("Compilation Failure");
+                    proc.waitFor();
+                    Scanner scan = new Scanner(proc.getErrorStream());
+                    Scanner hel = new Scanner(proc.getInputStream());
+                    if (scan.hasNext()) {
+                        tftype.setText("Compilation Failure");
+                        while (scan.hasNext())
+                            tftype.setText(tftype.getText() + scan.nextLine() + "\n");
+
+                    } else {
+                        tftype.setText("Code compiled successfully!!!");
+                        proc.destroy();
+                        execute();
 
 
-                    while (scan.hasNext())
-                        tftype.setText(tftype.getText() + scan.nextLine() + "\n");
-
-                } else {
-                    tftype.setText("Code compiled successfully!!!");
-
+                    }
+                } catch (Exception ex) {
+                    ex.printStackTrace();
                 }
-            } catch (Exception ex) {
-                ex.printStackTrace();
             }
-        }
 
-        if (Os.compareTo("Windows 10")==0) {
-            try {
-                bottom_left.setText("Detected os : Windows 10");
-                new Codecompilation();
-//                System.out.println(StaticClass.file.getAbsolutePath());
-//                String[] compileCommand = new String[]{"g++", StaticClass.file.getAbsolutePath() + StaticClass.file.getName(), "-o", StaticClass.file.getAbsolutePath() + "exec"};
-//                ProcessBuilder builder = new ProcessBuilder(compileCommand);
-//                Process comp = builder.start();
-//
-//                int compileResult = comp.waitFor();
-//
-//                if(compileResult != 0)
-//                    System.out.println(comp.getErrorStream().toString());
-//                else
-//                    System.out.println("Passed");
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        }
-            else{
-            bottom_left.setText("Unsupported Operating System");
+            if (Os.compareTo("Windows 10") == 0) {
+                try {
+                    bottom_left.setText("Detected os : Windows 10");
+                    new Codecompilation();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            } else {
+                bottom_left.setText("Unsupported Operating System");
 
             }
         }
     }
+
+    public void execute() {
+        try {
+            Runtime runtime = Runtime.getRuntime();
+            Process proc2 = runtime.exec("./a.out");
+
+            proc2.waitFor();
+            Scanner scan2 = new Scanner(proc2.getErrorStream());
+            Scanner hel2 = new Scanner(proc2.getInputStream());
+            if(scan2.hasNext())
+            {
+                tftype.setText("Execution Failure");
+                while (scan2.hasNext())
+                    tftype.setText(tftype.getText()+"\n"+ scan2.nextLine());
+            }
+            while (hel2.hasNext())
+                tftype.setText(tftype.getText()+"\n"+ hel2.nextLine());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+}
 

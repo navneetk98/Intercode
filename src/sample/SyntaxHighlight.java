@@ -58,7 +58,7 @@ public class SyntaxHighlight implements DocumentListener {
     public static void  readkeywords() throws IOException {
         String curDir=System.getProperty("user.dir");
 
-        String filePath = "D:\\Java Projects\\Intercode\\src\\sample\\Keywords\\c";
+        String filePath = "src/sample/Keywords/c";
         BufferedReader rd = new BufferedReader(new FileReader(filePath));
         String key;
         Trie = new Node();

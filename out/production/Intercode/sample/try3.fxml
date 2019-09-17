@@ -18,120 +18,120 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="Vboxmain" onKeyPressed="#keyPress" prefHeight="684.0" prefWidth="1262.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Intercodecontroller">
-   <children>
-      <HBox prefHeight="810.0" prefWidth="1262.0">
-         <children>
-            <VBox prefHeight="810.0" prefWidth="259.0">
-               <children>
-                  <Label fx:id="top_left_label" prefHeight="32.0" prefWidth="251.0">
-                     <font>
-                        <Font name="Droid Sans Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <Line endX="150.0" startX="-100.0" strokeLineCap="BUTT" strokeWidth="5.0">
-                     <fill>
-                        <LinearGradient endX="1.0" endY="1.0">
-                           <stops>
-                              <Stop color="BLACK" />
-                              <Stop color="RED" offset="1.0" />
-                           </stops>
-                        </LinearGradient>
-                     </fill>
-                     <stroke>
-                        <LinearGradient endX="1.0" endY="1.0">
-                           <stops>
-                              <Stop color="BLACK" />
-                              <Stop color="RED" offset="1.0" />
-                           </stops>
-                        </LinearGradient>
-                     </stroke>
-                  </Line>
-                  <Label layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="216.0" text="               Chat">
-                     <textFill>
-                        <LinearGradient endX="1.0" endY="1.0">
-                           <stops>
-                              <Stop color="RED" />
-                              <Stop color="BLACK" offset="1.0" />
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                     <font>
-                        <Font name="Comic Sans MS" size="19.0" />
-                     </font>
-                  </Label>
-               </children></VBox>
-            <VBox fx:id="top_left" prefHeight="796.0" prefWidth="868.0">
-               <children>
-                   <MenuBar prefHeight="31.0" prefWidth="358.0" stylesheets="@../css/styleMenu.css">
-                       <Menu mnemonicParsing="false" text="File">
-                           <MenuItem mnemonicParsing="false" onAction="#news" text="New              Ctrl+N" />
-                           <MenuItem mnemonicParsing="false" onAction="#load" text="Open...          Ctrl+O" />
-                           <MenuItem mnemonicParsing="false" onAction="#save" text="Save              Ctrl+S" />
-                           <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Save As..." />
-                           <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
-                       </Menu>
-                       <Menu mnemonicParsing="false" text="Style">
+    <children>
+        <HBox prefHeight="810.0" prefWidth="1262.0">
+            <children>
+                <VBox prefHeight="810.0" prefWidth="259.0">
+                    <children>
+                        <Label fx:id="top_left_label" prefHeight="32.0" prefWidth="251.0">
+                            <font>
+                                <Font name="Droid Sans Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Line endX="150.0" startX="-100.0" strokeLineCap="BUTT" strokeWidth="5.0">
+                            <fill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop color="BLACK" />
+                                        <Stop color="RED" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </fill>
+                            <stroke>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop color="BLACK" />
+                                        <Stop color="RED" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </stroke>
+                        </Line>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="216.0" text="               Chat">
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop color="RED" />
+                                        <Stop color="BLACK" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                            <font>
+                                <Font name="Comic Sans MS" size="19.0" />
+                            </font>
+                        </Label>
+                    </children></VBox>
+                <VBox fx:id="top_left" prefHeight="796.0" prefWidth="868.0">
+                    <children>
+                        <MenuBar prefHeight="31.0" prefWidth="358.0" stylesheets="@../css/styleMenu.css">
+                            <Menu mnemonicParsing="false" text="File">
+                                <MenuItem mnemonicParsing="false" onAction="#news" text="New              Ctrl+N" />
+                                <MenuItem mnemonicParsing="false" onAction="#load" text="Open...          Ctrl+O" />
+                                <MenuItem mnemonicParsing="false" onAction="#save" text="Save              Ctrl+S" />
+                                <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Save As..." />
+                                <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Style">
 
-                           <Menu mnemonicParsing="false" text="Font Family">
-                               <MenuItem mnemonicParsing="false" onAction="#ubuntu" text="Ubuntu" />
-                               <MenuItem mnemonicParsing="false" onAction="#arial" text="Arial" />
-                               <MenuItem mnemonicParsing="false" onAction="#scp" text="Source Code Pro" />
-                           </Menu>
-                           <Menu mnemonicParsing="false" text="Font Size">
-                               <RadioMenuItem onAction="#n15" text="15" />
-                               <RadioMenuItem onAction="#n14" text="14" />
-                               <RadioMenuItem onAction="#n13" text="13" />
-                               <RadioMenuItem onAction="#n12" text="12" />
-                               <RadioMenuItem onAction="#n11" text="11" />
-                               <RadioMenuItem onAction="#n10p5" text="10.5" />
-                               <RadioMenuItem onAction="#n10" text="10" />
-                               <RadioMenuItem onAction="#n9" text="9" />
-                               <RadioMenuItem onAction="#n8" text="8" />
-                               <RadioMenuItem onAction="#n7" text="7" />
-                               <RadioMenuItem onAction="#n6" text="6" />
-                               <Menu text="More...">
-                                   <MenuItem onAction="#n16" text="16" />
-                                   <MenuItem onAction="#n18" text="18" />
-                                   <MenuItem onAction="#n20" text="20" />
-                                   <MenuItem onAction="#n22" text="22" />
-                                   <MenuItem onAction="#n24" text="24(Default)" />
-                                   <MenuItem onAction="#n26" text="26" />
-                                   <MenuItem onAction="#n28" text="28" />
-                                   <MenuItem onAction="#n32" text="32" />
-                                   <MenuItem onAction="#n36" text="36" />
-                                   <MenuItem onAction="#n40" text="40" />
-                                   <MenuItem onAction="#n44" text="44" />
-                                   <MenuItem onAction="#n48" text="48" />
-                                   <MenuItem onAction="#n54" text="54" />
-                                   <MenuItem onAction="#n60" text="60" />
-                                   <MenuItem onAction="#n66" text="66" />
-                                   <MenuItem onAction="#n72" text="72" />
-                               </Menu>
-                           </Menu>
-                           <Menu mnemonicParsing="false" text="Themes">
-                               <RadioMenuItem fx:id="lightbt" mnemonicParsing="false" onAction="#lightTheme" text="Light Theme" />
-                               <RadioMenuItem fx:id="darkbt" mnemonicParsing="false" onAction="#darkTheme" text="Dark Theme" />
-                           </Menu>
-                       </Menu>
-                       <Menu mnemonicParsing="false" text="Compile and display output">
-                           <items>
-                               <MenuItem mnemonicParsing="false" onAction="#compile" text="Compile" />
-                           </items>
-                       </Menu>
-                   </MenuBar>
-                   <SwingNode id="swingNode" fx:id="swingNode" styleClass="text-area">
-                   </SwingNode>
-                  <TextArea fx:id="tftype" prefHeight="137.0" prefWidth="307.0" />
-                  <VBox prefHeight="25.0" prefWidth="1275.0" />
-               </children>
-            </VBox>
-            <ListView prefHeight="810.0" prefWidth="263.0" fx:id="list_id"  onMouseClicked="#onkey"/>
-         </children>
-      </HBox>
-      <HBox layoutX="1.0" layoutY="805.0" prefHeight="31.0" prefWidth="1261.0">
-         <children>
-            <Label fx:id="bottom_left" prefHeight="131.0" prefWidth="577.0" text="Label" />
-         </children>
-      </HBox>
-   </children>
+                                <Menu mnemonicParsing="false" text="Font Family">
+                                    <MenuItem mnemonicParsing="false" onAction="#ubuntu" text="Ubuntu" />
+                                    <MenuItem mnemonicParsing="false" onAction="#arial" text="Arial" />
+                                    <MenuItem mnemonicParsing="false" onAction="#scp" text="Source Code Pro" />
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Font Size">
+                                    <RadioMenuItem onAction="#n15" text="15" />
+                                    <RadioMenuItem onAction="#n14" text="14" />
+                                    <RadioMenuItem onAction="#n13" text="13" />
+                                    <RadioMenuItem onAction="#n12" text="12" />
+                                    <RadioMenuItem onAction="#n11" text="11" />
+                                    <RadioMenuItem onAction="#n10p5" text="10.5" />
+                                    <RadioMenuItem onAction="#n10" text="10" />
+                                    <RadioMenuItem onAction="#n9" text="9" />
+                                    <RadioMenuItem onAction="#n8" text="8" />
+                                    <RadioMenuItem onAction="#n7" text="7" />
+                                    <RadioMenuItem onAction="#n6" text="6" />
+                                    <Menu text="More...">
+                                        <MenuItem onAction="#n16" text="16" />
+                                        <MenuItem onAction="#n18" text="18" />
+                                        <MenuItem onAction="#n20" text="20" />
+                                        <MenuItem onAction="#n22" text="22" />
+                                        <MenuItem onAction="#n24" text="24(Default)" />
+                                        <MenuItem onAction="#n26" text="26" />
+                                        <MenuItem onAction="#n28" text="28" />
+                                        <MenuItem onAction="#n32" text="32" />
+                                        <MenuItem onAction="#n36" text="36" />
+                                        <MenuItem onAction="#n40" text="40" />
+                                        <MenuItem onAction="#n44" text="44" />
+                                        <MenuItem onAction="#n48" text="48" />
+                                        <MenuItem onAction="#n54" text="54" />
+                                        <MenuItem onAction="#n60" text="60" />
+                                        <MenuItem onAction="#n66" text="66" />
+                                        <MenuItem onAction="#n72" text="72" />
+                                    </Menu>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Themes">
+                                    <RadioMenuItem fx:id="lightbt" mnemonicParsing="false" onAction="#lightTheme" text="Light Theme" />
+                                    <RadioMenuItem fx:id="darkbt" mnemonicParsing="false" onAction="#darkTheme" text="Dark Theme" />
+                                </Menu>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Compile and display output">
+                                <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#compile" text="Compile" />
+                                </items>
+                            </Menu>
+                        </MenuBar>
+                        <SwingNode id="swingNode" fx:id="swingNode" styleClass="text-area">
+                        </SwingNode>
+                        <TextArea fx:id="tftype" prefHeight="137.0" prefWidth="307.0" />
+                        <VBox prefHeight="25.0" prefWidth="1275.0" />
+                    </children>
+                </VBox>
+                <ListView prefHeight="810.0" prefWidth="263.0" fx:id="list_id"  onMouseClicked="#onkey"/>
+            </children>
+        </HBox>
+        <HBox layoutX="1.0" layoutY="805.0" prefHeight="31.0" prefWidth="1261.0">
+            <children>
+                <Label fx:id="bottom_left" prefHeight="131.0" prefWidth="577.0" text="Label" />
+            </children>
+        </HBox>
+    </children>
 </AnchorPane>

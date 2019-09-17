@@ -1,0 +1,1 @@
+g++: error: C:\Users\Lenovo\Desktop\tri.ctri.c: No such file or directory

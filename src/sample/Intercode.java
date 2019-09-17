@@ -6,15 +6,23 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
 
 // JavaFX Scene
 
 
 public class Intercode extends Application {
+    public static Socket socket;
+    public static ObjectInputStream objectInputStream;
+    public static ObjectOutputStream objectOutputStream;
+    public ChoiceBox login_as;
 
     @Override
     public void start(Stage primaryStage) throws IOException, java.lang.OutOfMemoryError, java.lang.NullPointerException {
@@ -49,7 +57,20 @@ public class Intercode extends Application {
 //        }
 
         }
-//        public static void main (String[]args){
-//            launch(args);
-//        }
+    public static void main(String[] args)
+    {
+        try
+        {
+            socket=new Socket("192.168.2.5",3001);
+            System.out.println("Connected to Server ");
+            objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
+            objectOutputStream.flush();
+            objectInputStream=new ObjectInputStream(socket.getInputStream());
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        launch(args);
     }
+}
