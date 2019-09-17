@@ -1,6 +1,6 @@
 package Server;
 
-import Client.Credentials;
+import sample.Credentials;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

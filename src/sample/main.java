@@ -1,6 +1,6 @@
 package sample;
 
-import Client.Credentials;
+
 
 import Server.Verify;
 import javafx.event.ActionEvent;
@@ -29,13 +29,14 @@ import java.util.ResourceBundle;
 
 public class main  implements Initializable {
 
-@FXML
-public TextField name;
-public PasswordField pass;
-public TextField regno;
-public TextField cpi;
-public ChoiceBox login_as;
-    @FXML public Label statuslabel;
+    @FXML
+    public TextField name;
+    public PasswordField pass;
+    public TextField regno;
+    public TextField cpi;
+    public ChoiceBox login_as;
+    @FXML
+    public Label statuslabel;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -59,7 +60,7 @@ public ChoiceBox login_as;
             else
                 toggle = "0";
             System.out.println(uid + " " + password + " " + toggle);
-            sample.Credentials credentials =new sample.Credentials(uid,password,toggle,"l");
+            sample.Credentials credentials = new sample.Credentials(uid, password, toggle, "l");
 
             try {
                 objectOutputStream.writeObject(credentials);
@@ -93,23 +94,30 @@ public ChoiceBox login_as;
                     });
                     primaryStage.show();
 
-                }
-                else {
+                } else {
                     System.out.println("FAILED LOGIN");
                     statuslabel.setText("LOGIN FAILED !! RETRY!");
                 }
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-            catch (Exception ex) {
-                    ex.printStackTrace();
-                }
 
-            }
-        catch (Exception  e) {
-                e.printStackTrace();
-            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
+
+    public void register(ActionEvent click) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("ClientRegisterForm.fxml"));
+            Stage primaryStage = (Stage) ((Node) (click.getSource())).getScene().getWindow();
+            primaryStage.setTitle("Login");
+            primaryStage.setScene(new Scene(root, 1920, 1080));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+}
 
 
 

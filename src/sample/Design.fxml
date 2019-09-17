@@ -47,7 +47,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <JFXButton layoutX="565.0" layoutY="401.0" onAction="#login" prefHeight="24.0" prefWidth="98.0" style="-fx-background-color: #87d973;" stylesheets="@login.css" text="Register">
+      <JFXButton layoutX="565.0" layoutY="401.0" onAction="#register" prefHeight="24.0" prefWidth="98.0" style="-fx-background-color: #87d973;" stylesheets="@login.css" text="Register">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

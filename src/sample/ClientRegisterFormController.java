@@ -1,10 +1,17 @@
-package Client;
+package sample;
+
 
 import Server.Verify;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -21,11 +28,11 @@ public class ClientRegisterFormController {
     @FXML private TextField branchfield;
     @FXML private TextField cpifield;
 
-    public void onRegisterbtnClicked()
+    public void onRegisterbtnClicked(ActionEvent click)
     {
-        Socket socket = MainClient.socket;
-        ObjectOutputStream objectOutputStream = MainClient.objectOutputStream;
-        ObjectInputStream objectInputStream = MainClient.objectInputStream;
+        Socket socket = Intercode.socket;
+        ObjectOutputStream objectOutputStream = Intercode.objectOutputStream;
+        ObjectInputStream objectInputStream = Intercode.objectInputStream;
 
         System.out.println(socket);
         System.out.println(objectInputStream);
@@ -37,7 +44,7 @@ public class ClientRegisterFormController {
         String name=namefield.getText();
         String branch=branchfield.getText();
         String cpi=cpifield.getText();
-        Credentials credentials=new Credentials(uid,password,toggle,name,branch,cpi,"r");
+        sample.Credentials credentials=new Credentials(uid,password,toggle,name,branch,cpi,"r");
         try
         {
             objectOutputStream.writeObject(credentials);
@@ -55,6 +62,10 @@ public class ClientRegisterFormController {
                     statuslabel.setText("Registered as Interviewer");
                 else
                     statuslabel.setText("Registered AS CANDIDATE");
+                Parent root = FXMLLoader.load(getClass().getResource("Design.fxml"));
+                Stage primaryStage = (Stage) ((Node) (click.getSource())).getScene().getWindow();
+                primaryStage.setTitle("Register");
+                primaryStage.setScene(new Scene(root, 1920, 1080));
             }
             else
             {
