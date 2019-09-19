@@ -26,7 +26,7 @@ public class Intercode extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException, java.lang.OutOfMemoryError, java.lang.NullPointerException {
-        Parent root = FXMLLoader.load(getClass().getResource("Design.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login_page.fxml"));
     //    final SwingNode swingNode = new SwingNode();
       //  createSwingContent(swingNode);
 
@@ -61,11 +61,11 @@ public class Intercode extends Application {
     {
         try
         {
-            socket=new Socket("192.168.2.5",3001);
-            System.out.println("Connected to Server ");
-            objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
-            objectOutputStream.flush();
-            objectInputStream=new ObjectInputStream(socket.getInputStream());
+//            socket=new Socket("192.168.2.5",3001);
+//            System.out.println("Connected to Server ");
+//            objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
+//            objectOutputStream.flush();
+//            objectInputStream=new ObjectInputStream(socket.getInputStream());
         }
         catch(Exception e)
         {

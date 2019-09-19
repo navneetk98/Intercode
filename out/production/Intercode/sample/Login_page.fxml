@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -57,5 +58,6 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <Button fx:id="backup" layoutX="175.0" layoutY="368.0" mnemonicParsing="false" text="Button" onAction="#back" />
    </children>
 </AnchorPane>

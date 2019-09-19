@@ -62,7 +62,7 @@ public class ClientRegisterFormController {
                     statuslabel.setText("Registered as Interviewer");
                 else
                     statuslabel.setText("Registered AS CANDIDATE");
-                Parent root = FXMLLoader.load(getClass().getResource("Design.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("Login_page.fxml"));
                 Stage primaryStage = (Stage) ((Node) (click.getSource())).getScene().getWindow();
                 primaryStage.setTitle("Register");
                 primaryStage.setScene(new Scene(root, 1920, 1080));

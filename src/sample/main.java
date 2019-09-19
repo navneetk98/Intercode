@@ -10,10 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -37,6 +34,7 @@ public class main  implements Initializable {
     public ChoiceBox login_as;
     @FXML
     public Label statuslabel;
+    public Button backup;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -55,10 +53,14 @@ public class main  implements Initializable {
             System.out.println(objectOutputStream);
             String uid = regno.getText();
             String password = pass.getText();
-            if (login_as.getValue().equals("Interviewer"))
+            if (login_as.getValue().equals("Interviewer")) {
+                StaticClass.interviewer=true;
                 toggle = "1";
-            else
+            }
+            else {
                 toggle = "0";
+                StaticClass.interviewer=false;
+            }
             System.out.println(uid + " " + password + " " + toggle);
             sample.Credentials credentials = new sample.Credentials(uid, password, toggle, "l");
 
@@ -79,7 +81,7 @@ public class main  implements Initializable {
                     else
                         statuslabel.setText("LOGGED IN AS CANDIDATE");
 
-                    Parent root = FXMLLoader.load(getClass().getResource("try3.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("Intercode_ide_final.fxml"));
                     Stage primaryStage = (Stage) ((Node) (click.getSource())).getScene().getWindow();
                     primaryStage.setTitle("Intercode");
                     primaryStage.setScene(new Scene(root, 1920, 1080));
@@ -114,6 +116,28 @@ public class main  implements Initializable {
             primaryStage.setTitle("Login");
             primaryStage.setScene(new Scene(root, 1920, 1080));
         } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    public void back(ActionEvent click) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Intercode_ide_final.fxml"));
+            Stage primaryStage = (Stage) ((Node) (click.getSource())).getScene().getWindow();
+            primaryStage.setTitle("Intercode");
+            primaryStage.setScene(new Scene(root, 1920, 1080));
+            primaryStage.setMaximized(true);
+            primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/sbi.png")));
+
+
+            primaryStage.setOnCloseRequest(e -> {
+                e.consume();
+                Intercodecontroller incd = new Intercodecontroller();
+                incd.exiter();
+            });
+            primaryStage.show();
+        }
+        catch (Exception ex)
+        {
             ex.printStackTrace();
         }
     }

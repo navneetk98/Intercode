@@ -25,10 +25,13 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.io.*;
+import java.net.Socket;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.Scanner;
+
+import static sample.Intercode.objectOutputStream;
 
 
 public class Intercodecontroller implements Initializable, Runnable, DocumentListener {
@@ -48,6 +51,12 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
     private final BooleanBinding openShortcut = controlKey.and(oKey);
     private final BooleanBinding saveShortcut = controlKey.and(sKey);
     private Boolean savedFileB = false; // If is to do the simple save
+    public Socket socket;
+    public ObjectOutputStream objectOutput;
+    public ObjectInputStream objectInput;
+    public Socket chat_socket;
+    public ObjectOutputStream chat_objectOutput;
+    public ObjectInputStream chat_objectInput;
 
     public JTextPane jpane;
 
@@ -69,6 +78,23 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
         top_left_label.setText("Welcome : " + StaticClass.name + "   " + StaticClass.regno);
         SyntaxHighlight.doc = jpane.getStyledDocument();
         jpane.setBounds(10, 10, 1000, 1000);
+        try{
+        socket=new Socket(StaticClass.ip_address,3009);
+        System.out.println("Connected to Server ");
+        objectOutput=new ObjectOutputStream(socket.getOutputStream());
+        objectOutput.flush();
+        objectInput=new ObjectInputStream(socket.getInputStream());
+        StaticClass.objectOutput=objectOutput;
+        StaticClass.objectInput=objectInput;
+        StaticClass.socket_doc=socket;
+        Thread tr =new Thread(new Sync_receive());
+        tr.start();
+        
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
 
         try {
             SyntaxHighlight.readkeywords();
@@ -86,6 +112,7 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
         darkbt.setSelected(true); // Sets the darkbt button bes selected or as default option
         StaticClass.combo = combo;
         StaticClass.list_id = list_id;
+        StaticClass.jpane = jpane;
     }
 
 
