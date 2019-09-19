@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.embed.swing.SwingNode?>
 <?import javafx.scene.control.Label?>
@@ -9,11 +10,13 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -47,7 +50,7 @@
                                 </LinearGradient>
                             </stroke>
                         </Line>
-                        <Label layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="216.0" text="               Chat">
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="251.0" text="               Chat">
                             <textFill>
                                 <LinearGradient endX="1.0" endY="1.0">
                                     <stops>
@@ -60,6 +63,36 @@
                                 <Font name="Comic Sans MS" size="19.0" />
                             </font>
                         </Label>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="237.0">
+                           <children>
+                              <TextArea fx:id="chat_text" prefHeight="276.0" prefWidth="253.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Line endX="150.0" fill="BLACK" layoutX="110.0" layoutY="45.0" startX="-100.0" strokeLineCap="BUTT">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="RED" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Line>
+                  <JFXTextArea fx:id="chat_input" prefHeight="79.0" prefWidth="253.0" promptText="Enter here to send" />
+                  <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#send_chat" prefHeight="31.0" prefWidth="253.0" text="SEND" textAlignment="CENTER">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
                     </children></VBox>
                 <VBox fx:id="top_left" prefHeight="796.0" prefWidth="868.0">
                     <children>
@@ -128,7 +161,7 @@
                 </VBox>
             <VBox prefHeight="810.0" prefWidth="268.0">
                <children>
-                  <Label prefHeight="32.0" prefWidth="265.0" text="                          Suggessions" textAlignment="CENTER">
+                  <Label prefHeight="31.0" prefWidth="263.0" text="                          Suggessions" textAlignment="CENTER">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -141,9 +174,18 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Label>
-                  <ListView fx:id="list_id" onMouseClicked="#onkey" prefHeight="770.0" prefWidth="104.0" />
+                  <ListView fx:id="list_id" onMouseClicked="#onkey" prefHeight="399.0" prefWidth="263.0" />
                   <JFXTextField prefHeight="621.0" prefWidth="263.0" />
-                  <JFXButton mnemonicParsing="false" prefHeight="25.0" prefWidth="267.0" text="Save Notes" textAlignment="CENTER" />
+                  <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="25.0" prefWidth="267.0" text="Save Notes" textAlignment="CENTER">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="RED" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
                </children>
             </VBox>
             </children>

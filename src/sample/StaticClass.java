@@ -1,6 +1,7 @@
 package sample;
 //pbx62522@bcaoo.com
 
+import com.jfoenix.controls.JFXTextArea;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -22,6 +23,10 @@ public class StaticClass {
     public static ObjectOutputStream objectOutput;
     public static ObjectInputStream objectInput;
     public static Socket socket_doc;
+    public static ObjectOutputStream chat_objectOutput;
+    public static ObjectInputStream chat_objectInput;
+    public static TextArea chat_text;
+    public static JFXTextArea chat_input;
     public static JTextPane jpane;
     public static boolean interviewer;
     public static String regno;

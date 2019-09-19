@@ -26,13 +26,18 @@ import java.util.ResourceBundle;
 
 public class main  implements Initializable {
 
+    private Socket socket2;
+    private Socket socket3;
+
+
+
     @FXML
     public TextField name;
     public PasswordField pass;
     public TextField regno;
     public TextField cpi;
     public ChoiceBox login_as;
-    @FXML
+ @FXML
     public Label statuslabel;
     public Button backup;
 
@@ -75,6 +80,12 @@ public class main  implements Initializable {
                 Verify verify = (Verify) objectInputStream.readObject();
                 System.out.println(verify);
                 if (verify.isVerify()) {
+                    socket2=new Socket("192.168.2.5",3001);
+                    socket3=new Socket("192.168.2.5",3002);
+                    System.out.println("connected to server for chat at 3002 and editor at 3001");
+                    System.out.println("calling chatClientHandler class");
+                    new ChatHandlerClient(socket3);
+
                     System.out.println("login successful");
                     if (toggle.compareTo("1") == 0)
                         statuslabel.setText("LOGGED IN AS INTERVIEWER");

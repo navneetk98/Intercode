@@ -61,11 +61,12 @@ public class Intercode extends Application {
     {
         try
         {
-//            socket=new Socket("192.168.2.5",3001);
-//            System.out.println("Connected to Server ");
-//            objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
-//            objectOutputStream.flush();
-//            objectInputStream=new ObjectInputStream(socket.getInputStream());
+            System.out.println("Trying here");
+             socket=new Socket("192.168.2.5",3009);
+            System.out.println("Connected to Server ");
+            objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
+            objectOutputStream.flush();
+            objectInputStream=new ObjectInputStream(socket.getInputStream());
         }
         catch(Exception e)
         {

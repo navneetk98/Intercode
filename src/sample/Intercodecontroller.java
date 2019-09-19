@@ -1,6 +1,8 @@
 package sample;
 
 
+import Chat.SendMessage;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
@@ -70,6 +72,8 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
     public ListView list_id;
     public Label bottom_left;
     public Label top_left_label;
+    public TextArea chat_text;
+    public JFXTextArea chat_input;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) { // Be activates when the program opens.
@@ -78,23 +82,23 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
         top_left_label.setText("Welcome : " + StaticClass.name + "   " + StaticClass.regno);
         SyntaxHighlight.doc = jpane.getStyledDocument();
         jpane.setBounds(10, 10, 1000, 1000);
-        try{
-        socket=new Socket(StaticClass.ip_address,3009);
-        System.out.println("Connected to Server ");
-        objectOutput=new ObjectOutputStream(socket.getOutputStream());
-        objectOutput.flush();
-        objectInput=new ObjectInputStream(socket.getInputStream());
-        StaticClass.objectOutput=objectOutput;
-        StaticClass.objectInput=objectInput;
-        StaticClass.socket_doc=socket;
-        Thread tr =new Thread(new Sync_receive());
-        tr.start();
-        
-        }
-        catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
+//        try{
+//        socket=new Socket(StaticClass.ip_address,3009);
+//        System.out.println("Connected to Server ");
+//        objectOutput=new ObjectOutputStream(socket.getOutputStream());
+//        objectOutput.flush();
+//        objectInput=new ObjectInputStream(socket.getInputStream());
+//        StaticClass.objectOutput=objectOutput;
+//        StaticClass.objectInput=objectInput;
+//        StaticClass.socket_doc=socket;
+//        Thread tr =new Thread(new Sync_receive());
+//        tr.start();
+//
+//        }
+//        catch (Exception ex)
+//        {
+//            ex.printStackTrace();
+//        }
 
         try {
             SyntaxHighlight.readkeywords();
@@ -113,6 +117,8 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
         StaticClass.combo = combo;
         StaticClass.list_id = list_id;
         StaticClass.jpane = jpane;
+        StaticClass.chat_input=chat_input;
+        StaticClass.chat_text=chat_text;
     }
 
 
@@ -182,6 +188,12 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
         }
     }
 
+    public void send_chat()
+    {
+        SendMessage.on_button(StaticClass.chat_input.getText());
+
+
+    }
 
     public void onkey() {
 //    System.out.println("hiiiiiiiii");

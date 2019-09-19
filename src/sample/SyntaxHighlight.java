@@ -141,17 +141,17 @@ public class SyntaxHighlight implements DocumentListener {
 
     @Override
     public void insertUpdate(DocumentEvent e) {
-try {
-    String edit = doc.getText(0, doc.getLength());
-    Message msg =new Message(edit,StaticClass.interviewer);
-    StaticClass.objectOutput.writeObject(msg);
-    StaticClass.objectOutput.flush();
-}
-catch (Exception ex)
-{
-    System.out.println("Cant communicate with doc server");
-    ex.printStackTrace();
-}
+//try {
+//    String edit = doc.getText(0, doc.getLength());
+//    Message msg =new Message(edit,StaticClass.interviewer);
+//    StaticClass.objectOutput.writeObject(msg);
+//    StaticClass.objectOutput.flush();
+//}
+//catch (Exception ex)
+//{
+//    System.out.println("Cant communicate with doc server");
+//    ex.printStackTrace();
+//}
         setChange(e);
 
         int offset = e.getOffset();
