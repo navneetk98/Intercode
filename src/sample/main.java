@@ -80,8 +80,8 @@ public class main  implements Initializable {
                 Verify verify = (Verify) objectInputStream.readObject();
                 System.out.println(verify);
                 if (verify.isVerify()) {
-                    socket2=new Socket("192.168.2.5",3001);
-                    socket3=new Socket("192.168.2.5",3002);
+                    socket2=new Socket(StaticClass.ip_address,3001);
+                    socket3=new Socket(StaticClass.ip_address,3002);
                     System.out.println("connected to server for chat at 3002 and editor at 3001");
                     System.out.println("calling chatClientHandler class");
                     new ChatHandlerClient(socket3);

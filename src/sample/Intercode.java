@@ -62,7 +62,7 @@ public class Intercode extends Application {
         try
         {
             System.out.println("Trying here");
-             socket=new Socket("192.168.2.5",3009);
+             socket=new Socket(StaticClass.ip_address,3009);
             System.out.println("Connected to Server ");
             objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
             objectOutputStream.flush();

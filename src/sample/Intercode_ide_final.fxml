@@ -161,7 +161,7 @@
                 </VBox>
             <VBox prefHeight="810.0" prefWidth="268.0">
                <children>
-                  <Label prefHeight="31.0" prefWidth="263.0" text="                          Suggessions" textAlignment="CENTER">
+                  <Label prefHeight="31.0" prefWidth="263.0" text="                          Suggestions" textAlignment="CENTER">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>

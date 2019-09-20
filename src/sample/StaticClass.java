@@ -18,7 +18,7 @@ public class StaticClass {
 
     public static TextArea tf;
     public static ComboBox combo;
-    public static String ip_address="192.168.2.5";
+    public static String ip_address="172.31.129.22";
     public static String name;
     public static ObjectOutputStream objectOutput;
     public static ObjectInputStream objectInput;

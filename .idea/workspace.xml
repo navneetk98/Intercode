@@ -8,27 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Compilation bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/Chat/Client/ChatClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/Chat/Client/ChatClientThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/Chat/Server/ChatServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/Chat/Server/ChatServerThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/Intercode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/Intercode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/Intercode_ide_final.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/Intercode_ide_final.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Intercode/Chat/ReceiveMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/Chat/ReceiveMessage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/Intercodecontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/Intercodecontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/StaticClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/StaticClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/SyntaxHighlight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/SyntaxHighlight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Intercode/sample/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intercode/sample/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat/Client/ChatClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat/Client/ChatClientThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat/Server/ChatServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat/Server/ChatServerThread.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Intercode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Intercode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Intercode_ide_final.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Intercode_ide_final.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Intercodecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Intercodecontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/StaticClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/StaticClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SyntaxHighlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SyntaxHighlight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,11 +79,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chat/ReceiveMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="425">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="317">
+              <caret line="84" column="78" lean-forward="true" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/ChatHandlerClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="476">
               <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -133,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chat/SendMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="40" column="95" lean-forward="true" selection-start-line="40" selection-start-column="95" selection-end-line="40" selection-end-column="95" />
+            <state relative-caret-position="646">
+              <caret line="40" column="95" selection-start-line="40" selection-start-column="95" selection-end-line="40" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/StaticClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="187">
+              <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -155,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/src/sample/Intercode_ide_final.fxml">
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="137">
+            <state relative-caret-position="1156">
               <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
             </state>
           </provider>
@@ -164,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Intercodecontroller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="193" selection-start-line="193" selection-end-line="193" />
+            <state relative-caret-position="102">
+              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -173,8 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Intercode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+            <state relative-caret-position="368">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -225,25 +210,25 @@
         <option value="$PROJECT_DIR$/src/sample/Sync_receive.java" />
         <option value="$PROJECT_DIR$/src/sample/Login_page.fxml" />
         <option value="$PROJECT_DIR$/src/sample/ChatClient.java" />
-        <option value="$PROJECT_DIR$/src/sample/main.java" />
         <option value="$PROJECT_DIR$/src/Chat/Message.java" />
         <option value="$PROJECT_DIR$/src/sample/Message.java" />
         <option value="$PROJECT_DIR$/src/sample/SyntaxHighlight.java" />
         <option value="$PROJECT_DIR$/src/sample/ChatHandlerClient.java" />
-        <option value="$PROJECT_DIR$/src/sample/Intercode.java" />
-        <option value="$PROJECT_DIR$/src/sample/StaticClass.java" />
-        <option value="$PROJECT_DIR$/src/sample/Intercode_ide_final.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Intercodecontroller.java" />
         <option value="$PROJECT_DIR$/src/Chat/SendMessage.java" />
         <option value="$PROJECT_DIR$/src/Chat/ReceiveMessage.java" />
+        <option value="$PROJECT_DIR$/src/sample/Intercodecontroller.java" />
+        <option value="$PROJECT_DIR$/src/sample/Intercode_ide_final.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/StaticClass.java" />
+        <option value="$PROJECT_DIR$/src/sample/Intercode.java" />
+        <option value="$PROJECT_DIR$/src/sample/main.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="width" value="699" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectId" id="1Qy3clpYKgSSzCev3JkxCl7ZHRE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -257,6 +242,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,8 +272,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,7 +291,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568918910304" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="D:/Server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Satvik intercode/Intercode" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -526,7 +511,10 @@
       <workItem from="1568901890736" duration="2999000" />
       <workItem from="1568905209961" duration="164000" />
       <workItem from="1568905877928" duration="9589000" />
-      <workItem from="1568919407842" duration="4928000" />
+      <workItem from="1568919407842" duration="4952000" />
+      <workItem from="1568927807569" duration="1621000" />
+      <workItem from="1568952063395" duration="708000" />
+      <workItem from="1568960135002" duration="1257000" />
     </task>
     <task id="LOCAL-00001" summary="I Changed the Load System and i removed a buf of the Load System.">
       <created>1533068939508</created>
@@ -602,12 +590,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43362000" />
+    <option name="totallyTimeSpent" value="46972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.215959" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14348462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -865,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Intercode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Chat/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -885,21 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Intercodecontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="193" selection-start-line="193" selection-end-line="193" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Intercode_ide_final.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -907,9 +873,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat/ReceiveMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ChatHandlerClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="476">
           <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -917,37 +893,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/main.java">
+    <entry file="file://$PROJECT_DIR$/src/Chat/SendMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="646">
+          <caret line="40" column="95" selection-start-line="40" selection-start-column="95" selection-end-line="40" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Intercodecontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Intercode_ide_final.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/StaticClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="187">
+          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chat/SendMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Intercode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="40" column="95" lean-forward="true" selection-start-line="40" selection-start-column="95" selection-end-line="40" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="368">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chat/ReceiveMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="317">
+          <caret line="84" column="78" lean-forward="true" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -515,7 +515,7 @@ public class Intercodecontroller implements Initializable, Runnable, DocumentLis
         exitAlert.setContentText(null);
         ButtonType buttonCancel = new ButtonType("Cancel");
         ButtonType buttonDntSave = new ButtonType("Don't Save");
-
+        Label l1=new Label("Add rating:");
         exitAlert.getButtonTypes().setAll(buttonDntSave, buttonCancel);
         Optional<ButtonType> result = exitAlert.showAndWait();
         if (buttonDntSave == result.get()) {
